@@ -53,3 +53,34 @@ console.log(mymodule.who)
 console.log(mymodule.count)
 console.log(mymodule.inc())
 //after that run command node app
+
+------------------------------------------------------------------------------------------
+//creating the custom module
+
+const events = require("events")
+
+let emitter = new events.EventEmitter();
+
+emitter.on("customEvent",(message,user)=>{
+    console.log(`${user}: ${message}`);
+});
+
+emitter.emit("customEvent","Hello world","computer");
+emitter.emit("customEvent","That's pretty cool","eve");
+
+process.stdin.on("data",(data)=>{
+    const input = data.toString().trim();
+
+    if(input === "exit"){
+        emitter.emit("customEvent","Goodbye","process");
+        process.exit();
+    }
+    emitter.emit(
+        "customEvent",
+        data.toString().trim(),
+        "terminal"
+    );
+
+
+
+})
