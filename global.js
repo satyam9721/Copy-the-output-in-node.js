@@ -20,3 +20,33 @@ process.stdout.write(data.toString().trim());
 
 
 ask(answer.length);
+
+--------------------------------------------------------------------------
+//exporting files features to another file 
+
+//mymodule.js
+
+
+let count =0;
+
+const inc = () => ++count;
+const dec = () => --count;
+
+const getCount = () =>count;
+
+module.exports ={
+    anything:true,
+    who:"Bill",
+    count,
+    inc,
+    dec,
+    getCount
+};
+
+//creating a app.js file
+
+//app.js
+const mymodule = require("./my_module");
+
+console.log(mymodule.anything)
+//after that run command node app
