@@ -101,4 +101,24 @@ fs.readFile("./readme.md","UTF-8",(err,ipsum)=>{
     console.log(ipsum)
 })
     
-    
+   
+------------------------------------------------------------------------------------------------------------------------
+//creating javascript.md file and inserting the content of file
+const fs = require("fs");
+//md 's content goes into new created file which is javascript.md
+let md =`
+This is a new file
+
+==================
+ES6 Template String are cool.
+
+*Template Strings
+*Node File System
+*Readline CLIs
+
+`
+;
+
+fs.writeFile("javascript.md",md.trim(),function(){
+    console.log("Markdown Created")
+})
