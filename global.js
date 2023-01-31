@@ -84,3 +84,21 @@ process.stdin.on("data",(data)=>{
 
 
 })
+
+---------------------------------------------------------------------------------------------------------------------
+//reading the filename and extension
+const fs = require("fs");
+
+let files = fs.readdirSync("./")
+
+console.log(files);
+
+----------------------------------------------------------------------------------------------------------------------
+//reading the file's content(readme.md)
+const fs = require("fs");
+
+fs.readFile("./readme.md","UTF-8",(err,ipsum)=>{
+    console.log(ipsum)
+})
+    
+    
