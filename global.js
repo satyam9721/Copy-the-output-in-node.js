@@ -49,4 +49,7 @@ module.exports ={
 const mymodule = require("./my_module");
 
 console.log(mymodule.anything)
+console.log(mymodule.who)
+console.log(mymodule.count)
+console.log(mymodule.inc())
 //after that run command node app
