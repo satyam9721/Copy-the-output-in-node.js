@@ -173,3 +173,8 @@ if(fs.existsSync("Your-files-here")){
 
 fs.renameSync("./list.js","./project.js")
 console.log("list.js is renamed")
+
+//removing the particular file(project.js) from directory
+const fs = require("fs")
+
+fs.unlinkSync("./project.js")
