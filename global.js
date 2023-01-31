@@ -154,10 +154,15 @@ fs.writeFile("javascript.md",md.trim(),function(err){
 
 const fs = require("fs");
 
-fs.mkdir("Your-files-here",function(err){
-    if(err){
-        console.log(`ERROR: ${err}`);
-    }else{
-        console.log("directory created");
-    }
-})
+if(fs.existsSync("Your-files-here")){
+    console.log("already there!")
+}else{
+    fs.mkdir("Your-files-here",function(err){
+        if(err){
+            console.log(`ERROR: ${err}`);
+        }else{
+            console.log("directory created");
+        }
+    })
+}
+
