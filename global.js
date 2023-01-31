@@ -122,3 +122,29 @@ ES6 Template String are cool.
 fs.writeFile("javascript.md",md.trim(),function(){
     console.log("Markdown Created")
 })
+
+//appending the javascript.md file
+const fs = require("fs");
+//md 's content goes into new created file which is javascript.md
+let md =`
+This is a new file
+
+==================
+ES6 Template String are cool.
+
+*Template Strings
+*Node File System
+*Readline CLIs
+
+`
+;
+
+fs.writeFile("javascript.md",md.trim(),function(err){
+ if(err){
+    throw err;
+ }
+ fs.appendFileSync("javascript.md","\n\n### Node.js Everyone!");
+
+ console.log("Markdown created")
+
+})
