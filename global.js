@@ -166,3 +166,10 @@ if(fs.existsSync("Your-files-here")){
     })
 }
 
+-------------------------------------------------------------------------------------------
+    //renaming the particular file
+    
+    const fs = require("fs")
+
+fs.renameSync("./list.js","./project.js")
+console.log("list.js is renamed")
