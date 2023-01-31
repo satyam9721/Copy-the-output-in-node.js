@@ -148,3 +148,16 @@ fs.writeFile("javascript.md",md.trim(),function(err){
  console.log("Markdown created")
 
 })
+
+//creating directory or floder name with  Your-files-here
+
+
+const fs = require("fs");
+
+fs.mkdir("Your-files-here",function(err){
+    if(err){
+        console.log(`ERROR: ${err}`);
+    }else{
+        console.log("directory created");
+    }
+})
