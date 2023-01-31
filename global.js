@@ -178,3 +178,13 @@ console.log("list.js is renamed")
 const fs = require("fs")
 
 fs.unlinkSync("./project.js")
+
+//deleting notes.md file by code
+const fs = require("fs")
+
+fs.unlink("note.md",function(err){
+    if(err){
+        throw err;
+    }
+    console.log("Notes are gone")
+})
