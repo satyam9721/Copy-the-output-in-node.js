@@ -241,3 +241,31 @@ getDatas();
     getDatas();
 }
 start();
+----------------------------------------------------------------------------
+//closure property
+
+var sum= function(a){
+    console.log("Hello Viewers"+ a);
+    var c=4;
+    return function(b){
+        return a+b+c;
+    }
+}
+var store = sum(200);
+console.log(store(5));
+
+// returning multiple function in one function
+var sum = function(a,b,c){
+    return{
+        getsumtwo:function(){
+            return a+b;
+        },
+        getsumthree:function(){
+            return a+b+c;
+        }
+    }
+}
+
+var store = sum(3,4,5);
+console.log(store.getsumtwo());
+console.log(store.getsumthree());
