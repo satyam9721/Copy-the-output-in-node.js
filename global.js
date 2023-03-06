@@ -208,3 +208,36 @@ function getDatas(){
 }
 
 getDatas();
+
+// inserting data quickly using callback function
+const datas=[
+    {name:"Ajay",Profression:"Software Engineer"},
+    {name:"Alok",Profression:"Software Engineer"}
+];
+
+
+function getDatas(){
+    setTimeout(() =>{
+        let output ="";
+        datas.forEach((data,index)=>{
+            output+=`<li>${data.name}</li>`
+        })
+        document.body.innerHTML=output
+    },1000);
+}
+function createdata(newdata,callback){
+    setTimeout(()=>{
+        datas.push(newdata);
+        callback();
+
+    },2000)
+}
+createdata({name:"vivek",Profression:"Software Engineer"},getDatas)
+getDatas();
+-----------------------------------------------------------------------
+    //inserting data using async or await
+    async function start(){
+    await createdata({name:"Vivek",Profression:"Software Engineer"})
+    getDatas();
+}
+start();
