@@ -188,3 +188,23 @@ fs.unlink("note.md",function(err){
     }
     console.log("Notes are gone")
 })
+
+-----------------------------------------------------------------------------
+    //displaying data from js to on html
+    const datas=[
+    {name:"Ajay",Profression:"Software Engineer"},
+    {name:"Alok",Profression:"Software Engineer"}
+];
+
+
+function getDatas(){
+    setTimeout(() =>{
+        let output ="";
+        datas.forEach((data,index)=>{
+            output+=`<li>${data.name}</li>`
+        })
+        document.body.innerHTML=output
+    },1000);
+}
+
+getDatas();
