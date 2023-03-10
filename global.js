@@ -269,3 +269,21 @@ var sum = function(a,b,c){
 var store = sum(3,4,5);
 console.log(store.getsumtwo());
 console.log(store.getsumthree());
+---------------------------------------------------------------------------------
+    //working on Node.js-api
+    
+    const express = require("express");
+const app = express();
+const port = process.env.PORT || 3000;
+
+
+app.post("/students",(req,res)=>{
+    res.send("Hello sexy Satyam");
+})
+
+app.listen(port,()=>{
+    console.log(`Connected to this ${port}`)
+})
+//to run the app Node.js-api\Restfulapi> node src/app.js
+
+    
