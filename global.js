@@ -285,5 +285,36 @@ app.listen(port,()=>{
     console.log(`Connected to this ${port}`)
 })
 //to run the app Node.js-api\Restfulapi> node src/app.js
+---------------------------------------------------------------------------------
+    //loop and for each loop
+    
+    const companies = [
+    {name:"Google",category:"Product Based",start:1981,end:2004},
+    {name:"Amazon",category:"Product Based",start:1992,end:2008},
+    {name:"Paytm",category:"Product Based",start:1992,end:2007},
+    {name:"Conforge",category:"Service Based",start:1989,end:2010},
+    {name:"Midtree",category:"Service Based",start:1989,end:2010},
 
+
+
+];
+
+const ages =[33,12,20,16,5,54,21,44,61,13,15,45,25,64,32];
+
+
+for(let i=0;i<=companies.length;i++){
+    console.log(companies[i]);
+}
+
+//for each loop
+
+companies.forEach(function(company,index){
+    console.log(index);
+})
+
+
+
+companies.forEach((company,index)=>{
+    console.log(index);
+})
     
