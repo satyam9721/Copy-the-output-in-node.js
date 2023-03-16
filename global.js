@@ -318,3 +318,6 @@ companies.forEach((company,index)=>{
     console.log(index);
 })
     
+
+//filter
+
