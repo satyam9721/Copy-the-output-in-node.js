@@ -332,3 +332,27 @@ const age = ages.filter(function(age){
 //by 2nd method
 const finalage = ages.filter(age => age >=30)
 console.log(finalage)
+
+
+//filter
+
+const companies = [
+    {name:"Google",category:"Product Based",start:1981,end:2004},
+    {name:"Amazon",category:"Product Based",start:1992,end:2008},
+    {name:"Paytm",category:"Product Based",start:1992,end:2007},
+    {name:"Conforge",category:"Service Based",start:1989,end:2010},
+    {name:"Midtree",category:"Service Based",start:1989,end:2010},
+
+
+
+];
+
+
+
+const sb = companies.filter(function(company){
+    if(company.category==="Service Based"){
+        return true;
+    }
+})
+
+console.log(sb)
