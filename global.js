@@ -379,5 +379,11 @@ let obj = new Set(myArray);
 console.log(obj)
 console.log(obj.has(1));
 -------------------------------------------------------MAP----------------------------
-
-
+//creating simple map snipet
+let myMap = new Map([["a1","Ajay"],["a2","Vikas"]]);
+console.log(myMap);
+//adding and deleting the element
+let myMap = new Map([["a1","Ajay"],["a2","Vikas"]]);
+myMap.set("a2","Ajay");
+myMap.delete("a2");
+console.log(myMap);
