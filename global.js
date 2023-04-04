@@ -382,8 +382,24 @@ console.log(obj.has(1));
 //creating simple map snipet
 let myMap = new Map([["a1","Ajay"],["a2","Vikas"]]);
 console.log(myMap);
+
 //adding and deleting the element
 let myMap = new Map([["a1","Ajay"],["a2","Vikas"]]);
 myMap.set("a2","Ajay");
 myMap.delete("a2");
 console.log(myMap);
+
+//iterating the map
+let myMap = new Map([["a1","Ajay"],["a2","Vikas"]]);
+myMap.set("a2","Ajay");
+myMap.delete("a2");
+console.log(myMap);
+for(let [key,value] of myMap){
+    console.log(`keys ${key},value ${value}`)
+}
+myMap.forEach((key,value)=>{
+    console.log(key,value);
+})
+
+-----------------------------------------------WEAK SET-------------------------------------
+    
