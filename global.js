@@ -356,8 +356,9 @@ const sb = companies.filter(function(company){
 })
 
 console.log(sb)
--------------------------------------------------------
+-------------------------------------------------------SET----------------------------
 //copying the element 
+ "use strict";
 let myArray=[1,2,3,4];
 let obj = new Set(myArray);
 obj.add(5);
@@ -371,3 +372,12 @@ obj.add(5);
 console.log(obj)
 obj.delete(5);
 console.log(obj)
+
+//checking the element is present or not
+let myArray=[1,2,3,4];
+let obj = new Set(myArray);
+console.log(obj)
+console.log(obj.has(1));
+-------------------------------------------------------MAP----------------------------
+
+
