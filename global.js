@@ -356,3 +356,18 @@ const sb = companies.filter(function(company){
 })
 
 console.log(sb)
+-------------------------------------------------------
+//copying the element 
+let myArray=[1,2,3,4];
+let obj = new Set(myArray);
+obj.add(5);
+obj.add(5);
+console.log(obj)
+
+//deleting the object
+let myArray=[1,2,3,4];
+let obj = new Set(myArray);
+obj.add(5);
+console.log(obj)
+obj.delete(5);
+console.log(obj)
