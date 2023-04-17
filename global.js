@@ -401,5 +401,20 @@ myMap.forEach((key,value)=>{
     console.log(key,value);
 })
 
------------------------------------------------WEAK SET-------------------------------------
+-----------------------------------------------closure-properties-------------------------------------
+ var sum = function(a,b,c){
+    return{
+        getsumtwo:function(){
+            return a+b;
+        },
+         getsumthree:function(){
+            return a+b+c;
+        }
+    }
+}
+
+var store=sum(4,5,8)
+console.log(store.getsumtwo());
+console.log(store.getsumthree());
+    
     
