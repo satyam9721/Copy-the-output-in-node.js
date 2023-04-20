@@ -417,4 +417,23 @@ var store=sum(4,5,8)
 console.log(store.getsumtwo());
 console.log(store.getsumthree());
     
+----------------------------------call-------------------------------
+    //calling another function
+    let userDede={
+    name: "satyam gupta",
+    Age:28,
+    Designation:"Software Engineer",
+    printDerails: function(){
+        console.log(this)
+    }
+}
+userDede.printDerails();
+
+let userDede2={
+    name: " maar",
+    Age:21,
+    Designation:"Software Engineer",
+    
+}
+userDede.printDerails.call(userDede2);
     
