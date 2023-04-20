@@ -462,3 +462,88 @@ let userDede2={
 //function bowering
 printDerails.call(userDede2);
 
+//passing parameter
+    
+    let userDede={
+    name: "satyam gupta",
+    Age:28,
+    Designation:"Software Engineer",
+   
+}
+
+let printDerails=function(state,country){
+    console.log(this.name+ " "+state+ " "+country)
+}
+
+
+
+printDerails.call(userDede,"Delhi","India");
+
+let userDede2={
+    name: " maar",
+    Age:21,
+    Designation:"Software Engineer",
+    
+}
+
+printDerails.call(userDede2,"Delhi","India");
+
+-------------------------Apply-----------------------------
+    
+    let userDede={
+    name: "satyam gupta",
+    Age:28,
+    Designation:"Software Engineer",
+   
+}
+
+let printDerails=function(state,country){
+    console.log(this.name+ " "+state+ " "+country)
+}
+
+
+
+printDerails.call(userDede,"Delhi","India");
+
+let userDede2={
+    name: " maar",
+    Age:21,
+    Designation:"Software Engineer",
+    
+}
+
+//in apply we pass multiple values in as arraylist
+
+printDerails.apply(userDede2,["Delhi","India"]);
+
+-------------------------Bind-----------------------------
+    //store the value in variable and print
+    
+    let userDede={
+    name: "satyam gupta",
+    Age:28,
+    Designation:"Software Engineer",
+   
+}
+
+let printDerails=function(state,country){
+    console.log(this.name+ " "+state+ " "+country)
+}
+
+
+
+printDerails.call(userDede,"Delhi","India");
+
+let userDede2={
+    name: " maar",
+    Age:21,
+    Designation:"Software Engineer",
+    
+}
+
+
+
+
+
+let newfun=printDerails.bind(userDede,"Delhi","Mumbai");
+console.log(newfun);
