@@ -437,3 +437,28 @@ let userDede2={
 }
 userDede.printDerails.call(userDede2);
     
+//2nd method
+let userDede={
+    name: "satyam gupta",
+    Age:28,
+    Designation:"Software Engineer",
+   
+}
+
+let printDerails=function(){
+    console.log(this.name)
+}
+
+
+
+printDerails.call(userDede);
+
+let userDede2={
+    name: " maar",
+    Age:21,
+    Designation:"Software Engineer",
+    
+}
+
+printDerails.call(userDede2);
+
