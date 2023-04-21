@@ -590,3 +590,49 @@ console.timeEnd();
 console.time();
 console.log(efficient(5));
 console.timeEnd();
+
+
+-------------------------Debouncing-------------------------------------------------
+    
+    //function called after mili second,just like when we search laptop on filpkart it's show laptop in search bar
+    
+    
+    // for html file index.html 
+    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="search" onkeyup="BetterFunction()">
+    
+</body>
+<script src="test.js"></script>
+</html>
+  
+    
+    //for js file test.js
+    let counter=0;
+
+function getData(){
+    console.log("fetching" + counter++)
+}
+
+function myDebounce(call,d){
+    let timer;
+    return function(...args){
+        if(timer) clearTimeout(timer);
+        setTimeout(()=>{
+            call();
+        },d);
+    }
+}
+
+
+const BetterFunction=myDebounce(getData,1000);
+
+    
