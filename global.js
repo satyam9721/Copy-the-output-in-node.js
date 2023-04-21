@@ -635,4 +635,38 @@ function myDebounce(call,d){
 
 const BetterFunction=myDebounce(getData,1000);
 
-    
+    ---------------------------------------------------Throttling------------------------------
+
+
+//index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="search" >
+    <button id="myid" onclick="newfun()">Hello</button>
+</body>
+<script src="Throt.js"></script>
+</html>
+
+//Throt.js
+
+const mythrottle=(fn,d)=>{
+    return function(...args){
+        document.getElementById("myid").disabled=true;
+
+        setTimeout(()=>{
+ fn();
+        },d);
+    }
+}
+
+const newfun = mythrottle(()=>{
+    document.getElementById("myid").disabled=false;
+    console.log("User Clicked.!!")
+},1000);
