@@ -306,6 +306,24 @@ for(let i=0;i<=companies.length;i++){
     console.log(companies[i]);
 }
 
+//undefined vs not defined
+
+undefined=> it's mean memory or placeholder is allocated to variable but value is not assigned.
+
+ not defined=> it's mean memory or placeholder is not allocated to variable.
+
+console.log(a);
+var a=10;
+console.log(a);
+
+//scope
+
+scope means where we can access the value of variable or functions
+
+
+
+
+
 //for each loop
 
 companies.forEach(function(company,index){
